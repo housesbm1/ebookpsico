@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo Fortalecer tu Inteligencia Emocional | Psicología & Bienestar</title>
+  <meta name="description" content="Blog profesional de psicología con artículos basados en evidencia científica para tu crecimiento personal.">
+  <style>
+    /* Variables de color */
+    :root {
+      --color-primary: #2c3e50;
+      --color-secondary: #3498db;
+      --color-accent: #e74c3c;
+      --color-text: #333333;
+      --color-light: #f8f9fa;
+      --color-white: #ffffff;
+      --color-border: #e0e0e0;
+      --color-meta: #7f8c8d;
+    }
+    
+    /* Reset y estilos base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Merriweather', Georgia, serif;
+      line-height: 1.6;
+      color: var(--color-text);
+      background-color: var(--color-light);
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+    
+    a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Layout principal */
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: 100vh;
+    }
+    
+    @media (min-width: 992px) {
+      .wrapper {
+        grid-template-columns: 70% 30%;
+      }
+    }
+    
+    .main-content {
+      padding: 2rem;
+    }
+    
+    .sidebar {
+      padding: 2rem 1.5rem;
+      background-color: var(--color-white);
+      border-left: 1px solid var(--color-border);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Header */
+    .site-header {
+      background-color: var(--color-primary);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    
+    .site-branding {
+      display: flex;
+      align-items: center;
+    }
+    
+    .site-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--color-white);
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    .site-description {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Navegación */
+    .main-navigation ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    .main-navigation li {
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    
+    .main-navigation a {
+      color: var(--color-white);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+    }
+    
+    .main-navigation a:hover {
+      color: var(--color-white);
+      text-decoration: none;
+      opacity: 0.9;
+    }
+    
+    .main-navigation li::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-white);
+      transition: width 0.3s ease;
+    }
+    
+    .main-navigation li:hover::after {
+      width: 100%;
+    }
+    
+    /* Menú móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--color-white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Artículo principal */
+    .featured-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .article-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .article-title {
+      font-size: 2.2rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    .article-meta {
+      color: var(--color-meta);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .article-meta span {
+      margin: 0 0.5rem;
+    }
+    
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .article-content h2 {
+      font-size: 1.6rem;
+      color: var(--color-primary);
+      margin: 2.5rem 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-border);
+    }
+    
+    .article-content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    
+    .article-content ol, .article-content ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .inline-image {
+      float: right;
+      margin: 0 0 1.5rem 1.5rem;
+      max-width: 50%;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Sidebar */
+    .sidebar-widget {
+      margin-bottom: 2.5rem;
+    }
+    
+    .widget-title {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-border);
+      position: relative;
+    }
+    
+    .widget-title::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--color-secondary);
+    }
+    
+    .popular-posts {
+      list-style: none;
+    }
+    
+    .popular-post {
+      display: flex;
+      margin-bottom: 1.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .popular-post:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .popular-post-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 1rem;
+    }
+    
+    .popular-post-title {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    
+    .popular-post-date {
+      font-size: 0.8rem;
+      color: var(--color-meta);
+    }
+    
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .newsletter-form input {
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    
+    .newsletter-form button {
+      padding: 0.8rem;
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 600;
+    }
+    
+    .newsletter-form button:hover {
+      background-color: var(--color-primary);
+    }
+    
+    /* Footer */
+    .site-footer {
+      background-color: var(--color-primary);
+      padding: 3rem 0;
+      color: var(--color-white);
+      grid-column: 1 / -1;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    
+    .footer-widget h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-white);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-widget h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--color-secondary);
+    }
+    
+    .footer-widget ul {
+      list-style: none;
+    }
+    
+    .footer-widget li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-widget a {
+      color: rgba(255,255,255,0.8);
+    }
+    
+    .footer-widget a:hover {
+      color: var(--color-white);
+      text-decoration: none;
+      padding-left: 5px;
+    }
+    
+    .footer-widget p {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1rem;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      grid-column: 1 / -1;
+    }
+    
+    /* Elementos especiales */
+    .disclaimer {
+      background-color: #fef6f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--color-accent);
+      margin: 2.5rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .author-box {
+      display: flex;
+      align-items: center;
+      margin: 3rem 0;
+      padding: 1.5rem;
+      background-color: var(--color-white);
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    
+    .author-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1.5rem;
+      border: 3px solid var(--color-secondary);
+    }
+    
+    .author-info h3 {
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+    }
+    
+    .author-info p {
+      font-size: 0.9rem;
+      color: var(--color-meta);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Botones */
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+      border-radius: 4px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-decoration: none;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+      
+      .site-branding {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+      
+      .site-description {
+        display: none;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .main-navigation {
+        width: 100%;
+        display: none;
+      }
+      
+      .main-navigation.active {
+        display: block;
+      }
+      
+      .main-navigation ul {
+        flex-direction: column;
+        background-color: var(--color-primary);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      
+      .main-navigation li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      
+      .main-navigation a {
+        display: block;
+        padding: 0.8rem 1rem;
+      }
+      
+      .main-navigation li::after {
+        display: none;
+      }
+      
+      .featured-image {
+        height: 250px;
+      }
+      
+      .article-title {
+        font-size: 1.8rem;
+      }
+      
+      .inline-image {
+        float: none;
+        margin: 1.5rem auto;
+        max-width: 100%;
+      }
+      
+      .author-box {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .author-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="site-branding">
+          <div class="site-logo">Psicología & Bienestar</div>
+          <button class="menu-toggle">☰</button>
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Artículos</a></li>
+            <li><a href="#">Terapias</a></li>
+            <li><a href="#">Talleres</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <article class="article">
+        <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Persona reflexionando" class="featured-image">
+        
+        <header class="article-header">
+          <h1 class="article-title">Cómo Fortalecer tu Inteligencia Emocional Después de una Ruptura</h1>
+          <div class="article-meta">
+            <span>Publicado el 15 de junio, 2023</span>
+            <span>Por <a href="#">Dra. Laura Méndez</a></span>
+            <span>En <a href="#">Psicología Clínica</a></span>
+          </div>
+        </header>
+        
+        <div class="article-content">
+          <h2>Introducción</h2>
+          <p>Después de una ruptura amorosa, es normal sentir confusión, tristeza o incluso desesperación. Pero también puede ser una oportunidad única para el crecimiento personal. En este artículo exploraremos cómo trabajar tu inteligencia emocional para sanar y construir relaciones más sanas en el futuro.</p>
+          
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Concepto de inteligencia emocional" class="inline-image">
+          
+          <h2>¿Qué es la inteligencia emocional?</h2>
+          <p>La inteligencia emocional es la capacidad de reconocer, comprender y gestionar tus propias emociones y las de los demás. Según Daniel Goleman, se compone de cinco pilares: autoconciencia, autorregulación, motivación, empatía y habilidades sociales.</p>
+          
+          <h2>5 pasos para mejorarla tras una ruptura</h2>
+          <ol>
+            <li><strong>Acepta tus emociones:</strong> No luches contra lo que sientes. Validar tu dolor es el primer paso para transformarlo.</li>
+            <li><strong>Practica el autocuidado:</strong> El descanso, la alimentación y la actividad física impactan directamente en tu estabilidad emocional.</li>
+            <li><strong>Reflexiona sin culpas:</strong> Analiza qué aportaste a la relación sin juzgarte. Aprender es crecer.</li>
+            <li><strong>Mejora tu diálogo interno:</strong> Habla contigo como lo harías con un ser querido. Tu voz interior marca tu recuperación.</li>
+            <li><strong>Rodéate de apoyo sano:</strong> La compañía de personas que te quieren y te entienden acelera tu proceso de reconstrucción emocional.</li>
+          </ol>
+          
+          <div class="disclaimer">
+            <p><strong>Importante:</strong> Este contenido es informativo y no reemplaza el consejo profesional. Si estás atravesando una crisis emocional profunda, te recomendamos buscar ayuda de un profesional certificado.</p>
+          </div>
+          
+          <div class="author-box">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Dra. Laura Méndez" class="author-avatar">
+            <div class="author-info">
+              <h3>Sobre la autora</h3>
+              <p><strong>Dra. Laura Méndez</strong> es psicóloga clínica especializada en terapia cognitivo-conductual y desarrollo personal. Con más de 15 años de experiencia, ha ayudado a cientos de pacientes a superar crisis emocionales.</p>
+              <a href="#" class="btn">Ver todos sus artículos</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Artículos populares</h3>
+        <ul class="popular-posts">
+          <li class="popular-post">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Ansiedad" class="popular-post-img">
+            <div>
+              <h4 class="popular-post-title"><a href="#">Cómo manejar la ansiedad en tiempos difíciles</a></h4>
+              <div class="popular-post-date">12 mayo, 2023</div>
+            </div>
+          </li>
+          <li class="popular-post">
+            <img src="https://images.unsplash.com/photo-1491895200226-467f6c7a689b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Meditación" class="popular-post-img">
+            <div>
+              <h4 class="popular-post-title"><a href="#">Guía práctica de meditación para principiantes</a></h4>
+              <div class="popular-post-date">28 abril, 2023</div>
+            </div>
+          </li>
+          <li class="popular-post">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Emociones" class="popular-post-img">
+            <div>
+              <h4 class="popular-post-title"><a href="#">Entendiendo tus emociones: una guía completa</a></h4>
+              <div class="popular-post-date">15 abril, 2023</div>
+            </div>
+          </li>
+          <li class="popular-post">
+            <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Pareja" class="popular-post-img">
+            <div>
+              <h4 class="popular-post-title"><a href="#">Señales de una relación tóxica y cómo actuar</a></h4>
+              <div class="popular-post-date">2 abril, 2023</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Suscríbete al blog</h3>
+        <form class="newsletter-form">
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="email" placeholder="Tu email" required>
+          <button type="submit">Suscribirme</button>
+        </form>
+        <p style="font-size: 0.8rem; color: var(--color-meta); margin-top: 0.5rem;">Recibirás artículos y recursos exclusivos.</p>
+      </div>
+      
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Categorías</h3>
+        <ul>
+          <li><a href="#">Relaciones de pareja</a></li>
+          <li><a href="#">Autoestima</a></li>
+          <li><a href="#">Ansiedad y estrés</a></li>
+          <li><a href="#">Crecimiento personal</a></li>
+          <li><a href="#">Terapias</a></li>
+        </ul>
+      </div>
+    </aside>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-widget">
+          <h3>Sobre nosotros</h3>
+          <p>Somos un equipo de psicólogos comprometidos con ofrecer información basada en evidencia científica para tu bienestar emocional.</p>
+        </div>
+        
+        <div class="footer-widget">
+          <h3>Enlaces rápidos</h3>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nuestros especialistas</a></li>
+            <li><a href="#">Talleres y cursos</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-widget">
+          <h3>Contacto</h3>
+          <ul>
+            <li>Teléfono: +34 912 345 678</li>
+            <li>Email: info@psicologiabienestar.com</li>
+            <li>Dirección: Calle Psicología, 123, Madrid</li>
+          </ul>
+        </div>
+        
+        <div class="footer-widget">
+          <h3>Síguenos</h3>
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; 2023 Psicología & Bienestar. Todos los derechos reservados. | <a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Menú móvil
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.main-navigation').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
