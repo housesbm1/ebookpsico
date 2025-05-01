@@ -1,1 +1,973 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entendiendo tus emociones: una guía completa | Psicología & Bienestar</title>
+  <meta name="description" content="Guía completa para comprender y gestionar tus emociones basada en psicología científica. Aprende sobre emociones básicas, secundarias y ejercicios prácticos.">
+  <style>
+    /* Variables de color */
+    :root {
+      --color-primary: #2c3e50;
+      --color-secondary: #3498db;
+      --color-accent: #e74c3c;
+      --color-text: #333333;
+      --color-light: #f8f9fa;
+      --color-white: #ffffff;
+      --color-border: #e0e0e0;
+      --color-meta: #7f8c8d;
+    }
+    
+    /* Reset y estilos base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Merriweather', Georgia, serif;
+      line-height: 1.6;
+      color: var(--color-text);
+      background-color: var(--color-light);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+    
+    a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Layout principal */
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      width: 100%;
+    }
+    
+    .main-content {
+      padding: 2rem;
+      flex: 1;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    
+    .sidebar {
+      padding: 2rem 1.5rem;
+      background-color: var(--color-white);
+      border-left: 1px solid var(--color-border);
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    
+    @media (min-width: 992px) {
+      .main-content {
+        flex-basis: 70%;
+        max-width: 70%;
+      }
+      
+      .sidebar {
+        flex-basis: 30%;
+        max-width: 30%;
+      }
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      width: 100%;
+    }
+    
+    /* Header */
+    .site-header {
+      background-color: var(--color-primary);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .site-branding {
+      display: flex;
+      align-items: center;
+    }
+    
+    .site-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--color-white);
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    .site-description {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Navegación */
+    .main-navigation ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    .main-navigation li {
+      margin-left: 1.5rem;
+      position: relative;
+    }
+    
+    .main-navigation a {
+      color: var(--color-white);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+    }
+    
+    .main-navigation a:hover {
+      color: var(--color-white);
+      text-decoration: none;
+      opacity: 0.9;
+    }
+    
+    .main-navigation li::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-white);
+      transition: width 0.3s ease;
+    }
+    
+    .main-navigation li:hover::after {
+      width: 100%;
+    }
+    
+    /* Menú móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--color-white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Artículo principal */
+    .featured-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .article-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .article-title {
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    .article-meta {
+      color: var(--color-meta);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .article-meta span {
+      margin: 0 0.5rem;
+    }
+    
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .article-content h2 {
+      font-size: 1.6rem;
+      color: var(--color-primary);
+      margin: 2.5rem 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-border);
+    }
+    
+    .article-content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    
+    .article-content ol, .article-content ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .inline-image {
+      float: right;
+      margin: 0 0 1.5rem 1.5rem;
+      max-width: 50%;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Sidebar */
+    .sidebar-widget {
+      margin-bottom: 2.5rem;
+    }
+    
+    .widget-title {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-border);
+      position: relative;
+    }
+    
+    .widget-title::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--color-secondary);
+    }
+    
+    .popular-posts {
+      list-style: none;
+    }
+    
+    .popular-post {
+      display: flex;
+      margin-bottom: 1.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .popular-post:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .popular-post-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 1rem;
+    }
+    
+    .popular-post-title {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    
+    .popular-post-date {
+      font-size: 0.8rem;
+      color: var(--color-meta);
+    }
+    
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .newsletter-form input {
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    
+    .newsletter-form button {
+      padding: 0.8rem;
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 600;
+    }
+    
+    .newsletter-form button:hover {
+      background-color: var(--color-primary);
+    }
+    
+    /* Footer */
+    .site-footer {
+      background-color: var(--color-primary);
+      padding: 3rem 0;
+      color: var(--color-white);
+      width: 100%;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    .footer-widget {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .footer-widget h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-white);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-widget h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--color-secondary);
+    }
+    
+    .footer-widget ul {
+      list-style: none;
+    }
+    
+    .footer-widget li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-widget a {
+      color: rgba(255,255,255,0.8);
+    }
+    
+    .footer-widget a:hover {
+      color: var(--color-white);
+      text-decoration: none;
+      padding-left: 5px;
+    }
+    
+    .footer-widget p {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1rem;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      flex: 0 0 100%;
+    }
+    
+    /* Elementos especiales */
+    .disclaimer {
+      background-color: #fef6f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--color-accent);
+      margin: 2.5rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .author-box {
+      display: flex;
+      align-items: center;
+      margin: 3rem 0;
+      padding: 1.5rem;
+      background-color: var(--color-white);
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    
+    .author-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1.5rem;
+      border: 3px solid var(--color-secondary);
+    }
+    
+    .author-info h3 {
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+    }
+    
+    .author-info p {
+      font-size: 0.9rem;
+      color: var(--color-meta);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Botones */
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+      border-radius: 4px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-decoration: none;
+    }
+    
+    /* Estilos específicos para este artículo */
+    .pillar-box {
+      background-color: var(--color-white);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--color-secondary);
+    }
+    
+    .pillar-box h3 {
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .pillar-icon {
+      margin-right: 0.8rem;
+      color: var(--color-secondary);
+      font-size: 1.5rem;
+    }
+    
+    .exercise-box {
+      background-color: #f0f7ff;
+      padding: 1.2rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+      border-left: 4px solid var(--color-secondary);
+    }
+    
+    .exercise-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+    }
+    
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    th {
+      background-color: var(--color-primary);
+      color: white;
+      text-align: left;
+      padding: 12px;
+    }
+    
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(0,0,0,0.02);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-content,
+      .sidebar {
+        padding: 1.5rem;
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      .sidebar {
+        margin-top: 0;
+        border-left: none;
+        border-top: 1px solid var(--color-border);
+      }
+      
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+      
+      .site-branding {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+      
+      .site-description {
+        display: none;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .main-navigation {
+        width: 100%;
+        display: none;
+      }
+      
+      .main-navigation.active {
+        display: block;
+      }
+      
+      .main-navigation ul {
+        flex-direction: column;
+        background-color: var(--color-primary);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      
+      .main-navigation li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      
+      .main-navigation a {
+        display: block;
+        padding: 0.8rem 1rem;
+      }
+      
+      .main-navigation li::after {
+        display: none;
+      }
+      
+      .featured-image {
+        height: auto;
+        max-height: 250px;
+      }
+      
+      .article-title {
+        font-size: 1.6rem;
+      }
+      
+      .inline-image {
+        float: none;
+        margin: 1.5rem auto;
+        max-width: 100%;
+      }
+      
+      .author-box {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .author-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .popular-post {
+        flex-direction: column;
+      }
+      
+      .popular-post-img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="site-branding">
+          <div class="site-logo">Psicología & Bienestar</div>
+          <button class="menu-toggle">☰</button>
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Artículos</a></li>
+            <li><a href="#">Terapias</a></li>
+            <li><a href="#">Talleres</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+   <!-- Contenido principal -->
+    <main class="main-content">
+      <article class="article">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Persona explorando sus emociones" class="featured-image">
+        
+        <header class="article-header">
+          <h1 class="article-title">Entendiendo tus emociones: una guía completa</h1>
+          <div class="article-meta">
+            <span>Publicado el 15 de abril, 2023</span>
+            <span>Por <a href="#">Dra. Laura Méndez</a></span>
+            <span>En <a href="#">Desarrollo Personal</a></span>
+          </div>
+        </header>
+        
+        <div class="article-content">
+          <h2>¿Qué son las emociones?</h2>
+          <p>Las emociones son <strong>respuestas psicofisiológicas complejas</strong> que experimentamos ante estímulos internos o externos. Según la Asociación Americana de Psicología (APA), son estados afectivos que incluyen componentes:</p>
+          
+          <img src="https://images.unsplash.com/photo-1491895200226-467f6c7a689b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Expresiones emocionales" class="inline-image">
+          
+          <ul>
+            <li><strong>Fisiológicos</strong> (cambios en el cuerpo)</li>
+            <li><strong>Cognitivos</strong> (pensamientos asociados)</li>
+            <li><strong>Conductuales</strong> (expresiones y acciones)</li>
+          </ul>
+          
+          <p>Contrario a la creencia popular, <strong>no existen emociones "buenas" o "malas"</strong>. Todas cumplen funciones adaptativas importantes.</p>
+          
+          <h2>Las 6 emociones básicas</h2>
+          
+          <div class="pillar-box">
+            <h3><i class="fas fa-smile-beam pillar-icon"></i> 1. Alegría</h3>
+            <p><strong>Función:</strong> Promueve conexión social y bienestar.</p>
+            <p><strong>Señales físicas:</strong> Sonrisa espontánea, relajación muscular, energía.</p>
+            
+            <div class="exercise-box">
+              <div class="exercise-title">Ejercicio: Amplificar la alegría</div>
+              <p>Cuando experimentes alegría:</p>
+              <ol>
+                <li>Detente y saborea el momento</li>
+                <li>Compártelo con alguien (la alegría compartida se multiplica)</li>
+                <li>Anota en un diario qué la provocó</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="pillar-box">
+            <h3><i class="fas fa-sad-tear pillar-icon"></i> 2. Tristeza</h3>
+            <p><strong>Función:</strong> Procesar pérdidas y pedir apoyo.</p>
+            <p><strong>Señales físicas:</strong> Llanto, pesadez corporal, falta de energía.</p>
+            
+            <div class="exercise-box">
+              <div class="exercise-title">Técnica: Auto-compasión en 3 pasos</div>
+              <p>Ante la tristeza:</p>
+              <ol>
+                <li>Reconoce: "Estoy sintiendo tristeza"</li>
+                <li>Normaliza: "Es humano sentirse así en esta situación"</li>
+                <li>Actúa con amabilidad: ¿Qué necesito ahora? (descanso, hablar con alguien, etc.)</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="pillar-box">
+            <h3><i class="fas fa-angry pillar-icon"></i> 3. Ira</h3>
+            <p><strong>Función:</strong> Defender límites y necesidades.</p>
+            <p><strong>Señales físicas:</strong> Tensión muscular, calor, respiración acelerada.</p>
+            
+            <div class="exercise-box">
+              <div class="exercise-title">Manejo saludable de la ira</div>
+              <p>Cuando sientas ira:</p>
+              <ul>
+                <li>Detente antes de actuar (usa la técnica de 6 segundos)</li>
+                <li>Identifica la necesidad no cubierta bajo la ira</li>
+                <li>Expresa con asertividad: "Cuando X ocurre, me siento Y porque necesito Z"</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="pillar-box">
+            <h3><i class="fas fa-surprise pillar-icon"></i> 4. Sorpresa</h3>
+            <p><strong>Función:</strong> Prepararnos para lo nuevo.</p>
+            <p><strong>Señales físicas:</strong> Ojos abiertos, cejas levantadas, boca abierta.</p>
+          </div>
+          
+          <div class="pillar-box">
+            <h3><i class="fas fa-grimace pillar-icon"></i> 5. Asco</h3>
+            <p><strong>Función:</strong> Protegernos de lo potencialmente dañino.</p>
+            <p><strong>Señales físicas:</strong> Arrugar la nariz, náuseas, rechazo físico.</p>
+          </div>
+          
+          <div class="pillar-box">
+            <h3><i class="fas fa-fear pillar-icon"></i> 6. Miedo</h3>
+            <p><strong>Función:</strong> Protección ante amenazas reales o percibidas.</p>
+            <p><strong>Señales físicas:</strong> Dilatación pupilar, tensión, hipervigilancia.</p>
+            
+            <div class="exercise-box">
+              <div class="exercise-title">Técnica para manejar el miedo</div>
+              <p>Ante miedo excesivo:</p>
+              <ol>
+                <li>Pregunta: ¿Es una amenaza real o imaginada?</li>
+                <li>Si es real: ¿Qué acción protectora necesito?</li>
+                <li>Si es imaginada: Respira profundamente y repite "Estoy seguro ahora"</li>
+              </ol>
+            </div>
+          </div>
+          
+          <h2>Emociones secundarias y complejas</h2>
+          <p>Las emociones secundarias son combinaciones o derivaciones de las básicas:</p>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Emoción</th>
+                <th>Componentes básicos</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Culpa</td>
+                <td>Tristeza + miedo</td>
+                <td>Cuando lastimamos a alguien</td>
+              </tr>
+              <tr>
+                <td>Celos</td>
+                <td>Miedo + ira</td>
+                <td>Ante posible pérdida afectiva</td>
+              </tr>
+              <tr>
+                <td>Orgullo</td>
+                <td>Alegría + sorpresa</td>
+                <td>Al lograr algo importante</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h2>El proceso emocional en 4 etapas</h2>
+          
+          <div class="exercise-box">
+            <div class="exercise-title">Modelo de procesamiento emocional</div>
+            <ol>
+              <li><strong>Activación:</strong> Un estímulo desencadena la emoción (externo o interno)</li>
+              <li><strong>Experiencia subjetiva:</strong> Cómo interpretas y vives esa emoción</li>
+              <li><strong>Expresión:</strong> Manifestación fisiológica y conductual</li>
+              <li><strong>Regulación:</strong> Cómo manejas y procesas la emoción</li>
+            </ol>
+            <p>Problemas emocionales suelen ocurrir en las etapas 2 y 4.</p>
+          </div>
+          
+          <h2>Barreras para entender tus emociones</h2>
+          <p>¿Por qué nos cuesta identificar lo que sentimos?</p>
+          <ul>
+            <li><strong>Alexitimia:</strong> Dificultad para reconocer y describir emociones (afecta al 10% de la población)</li>
+            <li><strong>Socialización emocional:</strong> Mensajes como "los hombres no lloran" o "no seas dramática"</li>
+            <li><strong>Sobrecarga emocional:</strong> Cuando sentimos demasiado, nos bloqueamos</li>
+            <li><strong>Miedo a lo que sentimos:</strong> Evitamos emociones que nos asustan</li>
+          </ul>
+          
+          <div class="disclaimer">
+            <p><strong>Nota importante:</strong> Si constantemente te sientes abrumado por tus emociones o desconectado de ellas, considera buscar apoyo psicológico profesional.</p>
+          </div>
+          
+          <h2>Ejercicio práctico: Mapa emocional</h2>
+          <p>Para desarrollar tu alfabetización emocional:</p>
+          <ol>
+            <li>Dibuja una silueta humana en una hoja</li>
+            <li>Cuando sientas una emoción, marca dónde la sientes en el cuerpo</li>
+            <li>Anota el nombre específico de la emoción</li>
+            <li>Registra qué pensamientos la acompañan</li>
+          </ol>
+          <p>Después de una semana, analiza patrones: ¿Dónde sientes cada emoción? ¿Qué pensamientos son recurrentes?</p>
+          
+          <blockquote>
+            "Las emociones inexpresadas nunca mueren. Son enterradas vivas y salen más tarde de peores formas." — Sigmund Freud
+          </blockquote>
+          
+          <h2>Recursos recomendados</h2>
+          <ul>
+            <li><strong>Libro:</strong> "El lenguaje de las emociones" de Karla McLaren</li>
+            <li><strong>App:</strong> Mood Meter (para registrar y analizar emociones)</li>
+            <li><strong>Test:</strong> Escala de Alexitimia de Toronto (disponible online)</li>
+          </ul>
+          
+          <div class="author-box">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Dra. Laura Méndez" class="author-avatar">
+            <div class="author-info">
+              <h3>Sobre la autora</h3>
+              <p><strong>Dra. Laura Méndez</strong></p>
+               <p>Psicóloga clínica especializada en terapia cognitivo-conductual y desarrollo personal. Con más de 15 años de experiencia ayudando a pacientes a fortalecer su inteligencia emocional.</p>
+              <a href="https://www.strongbrossv.com/como-manejar-la-ansiedad-en-tiempo-dificiles" class="btn">Ver todos sus artículos</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    
+     <!-- Sidebar -->
+<aside class="sidebar">
+  <div class="sidebar-widget">
+    <h3 class="widget-title">Artículos populares</h3>
+    <ul class="popular-posts">
+      <li class="popular-post">
+        <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Inteligencia emocional" class="popular-post-img">
+        <div>
+          <h4 class="popular-post-title"><a href="https://www.strongbrossv.com/como-fortalecer-tu-inteligencia-emocional">Cómo Fortalecer tu Inteligencia Emocional</a></h4>
+          <div class="popular-post-date">15 junio, 2023</div>
+        </div>
+      </li>
+      <li class="popular-post">
+        <img src="https://images.unsplash.com/photo-1491895200226-467f6c7a689b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Meditación" class="popular-post-img">
+        <div>
+          <h4 class="popular-post-title"><a href="https://www.strongbrossv.com/guia-practica-de-meditacion-para-principiantes">Guía práctica de meditación para principiantes</a></h4>
+          <div class="popular-post-date">28 abril, 2023</div>
+        </div>
+      </li>
+      <li class="popular-post">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Emociones" class="popular-post-img">
+        <div>
+          <h4 class="popular-post-title"><a href="https://www.strongbrossv.com/entendiendo-tus-emociones-una-guia-completa">Entendiendo tus emociones: una guía completa</a></h4>
+          <div class="popular-post-date">15 abril, 2023</div>
+        </div>
+      </li>
+      <li class="popular-post">
+        <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Pareja" class="popular-post-img">
+        <div>
+          <h4 class="popular-post-title"><a href="https://www.strongbrossv.com/senales-de-una-relacion-toxica-y-como-actuar">Señales de una relación tóxica y cómo actuar</a></h4>
+          <div class="popular-post-date">2 abril, 2023</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+      
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Suscríbete al blog</h3>
+        <form class="newsletter-form">
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="email" placeholder="Tu email" required>
+          <button type="submit">Suscribirme</button>
+        </form>
+        <p style="font-size: 0.8rem; color: var(--color-meta); margin-top: 0.5rem;">Recibirás artículos y recursos exclusivos.</p>
+      </div>
+      
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Test de IE</h3>
+        <p>¿Quieres evaluar tu inteligencia emocional? Realiza nuestro test gratuito:</p>
+        <a href="#" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Hacer el test</a>
+      </div>
+    </aside>
+  </div>
 
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-widget">
+        <h3>Sobre nosotros</h3>
+        <p>Somos un equipo de psicólogos comprometidos con ofrecer información basada en evidencia científica para tu bienestar emocional.</p>
+      </div>
+      
+      <div class="footer-widget">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nuestros especialistas</a></li>
+          <li><a href="#">Talleres y cursos</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-widget">
+        <h3>Contacto</h3>
+        <ul>
+          <li>Teléfono: +34 912 345 678</li>
+          <li>Email: info@psicologiabienestar.com</li>
+          <li>Dirección: Calle Psicología, 123, Madrid</li>
+        </ul>
+      </div>
+      
+      <div class="footer-widget">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2023 Psicología & Bienestar. Todos los derechos reservados. | <a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menú móvil
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.main-navigation').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
